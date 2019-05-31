@@ -9,6 +9,7 @@ import {
   NavLink,
   Container
 } from  'reactstrap';
+import { Link } from 'react-router-dom'
 // import logo from '../assets/logo.jpg'
 
 class Navigation extends Component {
@@ -38,6 +39,9 @@ class Navigation extends Component {
                     <NavLink href="https://github.com/TylerOlsen14">
                       Github
                     </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/Records">Records</Link>
                   </NavItem>
                 </Nav>
               </Collapse>

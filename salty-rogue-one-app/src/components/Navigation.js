@@ -10,7 +10,7 @@ import {
   Container
 } from  'reactstrap';
 import { Link } from 'react-router-dom'
-// import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.jpg'
 
 class Navigation extends Component {
   state = {
@@ -27,8 +27,8 @@ class Navigation extends Component {
       return (
         <div>
           <Navbar color="dark" dark expand="sm" className="mb-5">
-            <Container>
-              {/* <img src={logo} alt="Salty Rogue Real Estate" className="mr-5" /> */}
+            <Container className="NavigationContainer">
+              <img src={logo} alt="Salty Rogue Real Estate" width="5%" />
               <NavbarBrand href="/">
                 Scraped address
               </NavbarBrand>
@@ -42,6 +42,9 @@ class Navigation extends Component {
                   </NavItem>
                   <NavItem>
                     <Link to="/Records">Records</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/Address">Address Book</Link>
                   </NavItem>
                 </Nav>
               </Collapse>

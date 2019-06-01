@@ -51,6 +51,7 @@ class UpdateAddressModal extends Component {
 
   onSubmit = async e => {
     e.preventDefault();
+    // await fetch(`http://localhost:5000/address`+ this.props.scrape._id, {
     await fetch(`https://salty-address-scrape5kitchen.herokuapp.com/`+ this.props.scrape._id, {
       method: "PUT",
       headers: {

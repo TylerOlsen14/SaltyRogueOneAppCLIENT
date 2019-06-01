@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button, CardFooter } from 'reactstrap'
+// import ReactDOM from 'react-dom';
+import { Card, CardText, CardBody, CardTitle, Button, CardFooter } from 'reactstrap'
 import UpdateAddressModal from './UpdateAddressModal'
 import ReadModal from './ReadModal'
 
 class AddressCard extends Component{
   constructor() {
     super();
-    this.state = { date: []}
+    this.state = {data: []}
   }
 
   componentDidMount() {
-    fetch(`http://localhost:5000`)
-    .then(res => res.json()) //put it all in JSON
-    .then(json => this.setState({ data: json })) // puts it back out as 'data'
+    fetch(`https://salty-address-scrape5kitchen.herokuapp.com/`)
+    // fetch(`http://localhost:5000/address`)
+      .then(res => res.json()) //put it all in JSON
+      .then(json => this.setState({ data: json })) // puts it back out as 'data'
   }
 
   onDeleteClick = async _id => {
-    await fetch(`http://localhost:5000`+ _id, {
+    await fetch(`https://salty-address-scrape5kitchen.herokuapp.com/`+ _id, {
       method: 'DELETE'
     }).then(resp => {
       this.componentDidMount();
@@ -27,7 +28,7 @@ class AddressCard extends Component{
   render(){
     return (
       <div className="AddressCard">
-        {this.state.data.map(scrape => (
+        {this.state.data.map( scrape => (
           <Card className="p-3 m-3" style={{width:"300px"}} key={scrape._id}>
             <CardTitle>{scrape.name}</CardTitle>
             <CardBody>

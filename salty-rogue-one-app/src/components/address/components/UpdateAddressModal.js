@@ -75,6 +75,7 @@ class UpdateAddressModal extends Component {
         <Button
           color="secondary"
           onClick={this.toggle}
+          style={{width:"150px"}}
         >
           Update Record
         </Button>

@@ -9,7 +9,6 @@ import {
   NavLink,
   Container
 } from  'reactstrap';
-import { Link } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
 
 class Navigation extends Component {
@@ -28,23 +27,23 @@ class Navigation extends Component {
         <div>
           <Navbar color="dark" dark expand="sm" className="mb-5">
             <Container className="NavigationContainer">
-              <img src={logo} alt="Salty Rogue Real Estate" width="5%" />
               <NavbarBrand href="/">
+                <img src={logo} alt="Salty Rogue Real Estate" width="50px" />
                 Scraped address
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
+                    <NavLink href="/Records">Records</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="/Address">Address Book</NavLink>
+                  </NavItem>
+                  <NavItem>
                     <NavLink href="https://github.com/TylerOlsen14">
-                      Github
+                      Github - TylerOlsen14
                     </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/Records">Records</Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/Address">Address Book</Link>
                   </NavItem>
                 </Nav>
               </Collapse>

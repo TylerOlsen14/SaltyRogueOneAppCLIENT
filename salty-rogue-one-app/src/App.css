@@ -48,9 +48,24 @@ img{
   width: 3rem;
 }
 .ReadModalButton{
-  width: 207px;
+  width: 180px;
   margin-bottom: .25rem;
 }
-#item{
+/*#item{
   margin-bottom: .25rem;
+}*/
+.main{
+  margin: auto;
+}
+.ButtonGroup{
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  align-content: space-around;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+.HomeButtonGroup{
+  margin: auto;
 }

@@ -20,8 +20,9 @@
   transition: opacity 1000ms ease-in;
 }
 
-img{
+.imgNavBar{
   margin-right: 5px;
+  width: 50px;
 }
 
 .NavigationContainer{
@@ -68,4 +69,19 @@ img{
 }
 .HomeButtonGroup{
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.HomeImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.addressScrape, .phoneRecords{
+  display: flex;
+  flex-direction: column;
+}
+#HomeButton{
+  align-self: flex-start
 }

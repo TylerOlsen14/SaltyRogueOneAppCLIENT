@@ -3,6 +3,8 @@ import {
   Button,
   NavLink
 } from 'reactstrap';
+import AddressScrape from '../assets/SaltyRogueAddressScrapeScreeShot.png'
+import PhoneRecords from '../assets/SaltyRoguePhoneRecordsScreenShot.png'
 
 const Home = () => {
   return (
@@ -12,16 +14,32 @@ const Home = () => {
           <h1>Salty Rogue Real Estate</h1>
         </div>
         <div className="HomeButtonGroup">
-          <Button style={{margin:"5em"}}>
-            <NavLink href="/address" style={{color: "white"}}>
-              Address Book
-            </NavLink>
-          </Button>
-          <Button style={{margin:"5em"}}>
-            <NavLink href="/Records" style={{color: "white"}}>
-              Records
-            </NavLink>
-          </Button>
+          <div className="addressScrape">
+            <Button style={{margin:"auto"}} width="5rem" id="HomeButton">
+              <NavLink href="/address" style={{color: "white"}}>
+                Address Book
+              </NavLink>
+            </Button>
+            <img
+              src={AddressScrape}
+              alt="Address Scrape"
+              width="80%"
+              className="HomeImage"
+            />
+          </div>
+          <div className="phoneRecords">
+            <Button style={{margin:"auto"}} width="5rem" id="HomeButton">
+              <NavLink href="/Records" style={{color: "white"}}>
+                Records
+              </NavLink>
+            </Button>
+            <img
+              src={PhoneRecords}
+              alt="Phone Records"
+              width="80%"
+              className="HomeImage"
+            />
+          </div>
         </div>
       </div>
     </div>

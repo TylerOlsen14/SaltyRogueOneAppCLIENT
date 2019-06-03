@@ -28,8 +28,13 @@ class Navigation extends Component {
           <Navbar color="dark" dark expand="sm" className="mb-5">
             <Container className="NavigationContainer">
               <NavbarBrand href="/">
-                <img src={logo} alt="Salty Rogue Real Estate" width="50px" />
-                Scraped address
+                <img
+                  src={logo}
+                  alt="Salty Rogue Real Estate" 
+                  width="50px"
+                  className="ImgNavBar"
+                />
+                  Salty Rogue Real Estate
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>

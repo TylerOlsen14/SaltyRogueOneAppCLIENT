@@ -37,10 +37,10 @@ class AddressCard extends Component{
             </CardBody>
             <CardFooter>
               <div className="ButtonGroup">
-                <ReadModal scrape={scrape} />
+                <ReadModal scrape={scrape} style="{{margin-bottom:1px;}}" />
                 <UpdateAddressModal scrape={scrape} refresh={this.getAddress} />
                 <Button
-                  style={{height: '2.35em'}}
+                  style={{height: '2.4em'}}
                   onClick={() => this.onDeleteClick(scrape._id)}
                   color="danger"
                 >
